@@ -6,6 +6,13 @@ function setup() {
 let pop11 = false;
 let pop12 = false;
 let pop13 = false;
+let pop14 = false;
+let pop15 = false;
+let pop16 = false;
+let pop17 = false;
+let pop18 = false;
+let pop19 = false;
+let pop20 = false;
 
 //rectangle
 let positionrect = { x: 0, y: 100, z: 200 };
@@ -27,18 +34,50 @@ let kutu = { a: 0, b: 100 };
 
 //top rect 11
 function toprect11() {
-  fill(222, 49, 99);
+  fill(255, 128, 0);
   rect(kutu.a, kutu.b - 100, 50, 20);
 }
 //top rect 12
 function toprect12() {
-  fill(222, 80, 9);
+  fill(255, 128, 0);
   rect(kutu.a + 50, kutu.b - 100, 50, 20);
 }
 //top rect 13
 function toprect13() {
-  fill(22, 80, 9);
+  fill(255, 128, 0);
   rect(kutu.a + 100, kutu.b - 100, 50, 20);
+}
+//top rect 14
+function toprect14() {
+  fill(255, 128, 0);
+  rect(kutu.a + 150, kutu.b - 100, 50, 20);
+}
+//top rect 15
+function toprect15() {
+  fill(255, 128, 0);
+  rect(kutu.a + 200, kutu.b - 100, 50, 20);
+}
+//top rect 16
+function toprect16() {
+  fill(255, 128, 0);
+  rect(kutu.a + 250, kutu.b - 100, 50, 20);
+}
+//top rect 17
+function toprect17() {
+  fill(255, 128, 0);
+  rect(kutu.a + 300, kutu.b - 100, 50, 20);
+} //top rect 18
+function toprect18() {
+  fill(255, 128, 0);
+  rect(kutu.a + 350, kutu.b - 100, 50, 20);
+}
+function toprect19() {
+  fill(255, 128, 0);
+  rect(kutu.a + 400, kutu.b - 100, 50, 20);
+}
+function toprect20() {
+  fill(255, 128, 0);
+  rect(kutu.a + 450, kutu.b - 100, 50, 20);
 }
 
 //ball
@@ -128,6 +167,83 @@ function draw() {
       positionball.y - ballradius <= kutu.b - 80
     ) {
       pop13 = true;
+      ballspeed.y *= -1;
+    }
+  }
+  if (!pop14) {
+    toprect14();
+    if (
+      positionball.x >= kutu.a + 150 &&
+      positionball.x <= kutu.a + 200 &&
+      positionball.y - ballradius <= kutu.b - 80
+    ) {
+      pop14 = true;
+      ballspeed.y *= -1;
+    }
+  }
+  if (!pop15) {
+    toprect15();
+    if (
+      positionball.x >= kutu.a + 200 &&
+      positionball.x <= kutu.a + 250 &&
+      positionball.y - ballradius <= kutu.b - 80
+    ) {
+      pop15 = true;
+      ballspeed.y *= -1;
+    }
+  }
+  if (!pop16) {
+    toprect16();
+    if (
+      positionball.x >= kutu.a + 250 &&
+      positionball.x <= kutu.a + 300 &&
+      positionball.y - ballradius <= kutu.b - 80
+    ) {
+      pop16 = true;
+      ballspeed.y *= -1;
+    }
+  }
+  if (!pop17) {
+    toprect17();
+    if (
+      positionball.x >= kutu.a + 300 &&
+      positionball.x <= kutu.a + 350 &&
+      positionball.y - ballradius <= kutu.b - 80
+    ) {
+      pop17 = true;
+      ballspeed.y *= -1;
+    }
+  }
+  if (!pop18) {
+    toprect18();
+    if (
+      positionball.x >= kutu.a + 350 &&
+      positionball.x <= kutu.a + 400 &&
+      positionball.y - ballradius <= kutu.b - 80
+    ) {
+      pop18 = true;
+      ballspeed.y *= -1;
+    }
+  }
+  if (!pop19) {
+    toprect19();
+    if (
+      positionball.x >= kutu.a + 400 &&
+      positionball.x <= kutu.a + 450 &&
+      positionball.y - ballradius <= kutu.b - 80
+    ) {
+      pop19 = true;
+      ballspeed.y *= -1;
+    }
+  }
+  if (!pop20) {
+    toprect20();
+    if (
+      positionball.x >= kutu.a + 450 &&
+      positionball.x <= kutu.a + 500 &&
+      positionball.y - ballradius <= kutu.b - 80
+    ) {
+      pop20 = true;
       ballspeed.y *= -1;
     }
   }
