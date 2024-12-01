@@ -102,7 +102,7 @@ function draw() {
     if (!bricks.destroyed) {
       fill(255, 128, 0);
       rect(bricks.x, bricks.y, ballon.width, ballon.height);
-  
+
       if (
         positionball.x + ballradius >= bricks.x &&
         positionball.x - ballradius <= bricks.x + ballon.width &&
@@ -111,15 +111,9 @@ function draw() {
       ) {
         ballspeed.y *= -1;
         bricks.destroyed = true; // Mark brick as destroyed
-        return true; // loop exir 
+        return true; // loop exir
       }
     }
-    return false; //prevents poping multiple bricks at same time 
+    return false; //prevents poping multiple bricks at same time
   });
-  
-}
- 
-      ballspeed.y *= -1;
-    }
-  }
 }
